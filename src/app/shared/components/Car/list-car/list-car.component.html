@@ -1,0 +1,19 @@
+<div class="example-wrapper">
+  <div class="row mt-5">
+    <div class="col-3" *ngFor="let car of cars">
+      <article class="pin bg-white rounded shadow">
+        <div class="mw-100 overflow-hidden rounded-top">
+          <a routerLink="/client/car/show/{{car.id}}">
+            <img src="{{car.destination}}" alt="{{car.name}}"
+                 class="w-100 rounded-top" style="max-height: 150px;">
+          </a>
+        </div>
+        <h2 class="h5 pl-3 pt-3"><a href="" class="text-secondary text-decoration-none">{{car.name}}</a></h2>
+        <span class="pl-3 pt-3 text-muted" >{{car.description | truncate}}</span>
+        <div class="row">
+        </div>
+
+      </article>
+    </div>
+  </div>
+</div>

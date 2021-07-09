@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a href="" class="navbar-brand">VOITURES</a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a routerLink="/client/car" class="nav-link">Acceuil</a>
+    </li>
+    <li class="nav-item" *ngIf="!isConnected">
+      <a routerLink="/" class="nav-link">Connecter</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" (click)="logout()"
+         class="btn btn-label btn-label-brand btn-sm btn-bold" class="nav-link" *ngIf="isConnected">Deconnecter</a>
+    </li>
+  </ul>
+</nav>

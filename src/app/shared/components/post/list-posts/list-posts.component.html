@@ -1,0 +1,19 @@
+<div class="list-group" *ngFor="let post of posts | paginate: { itemsPerPage: 8, currentPage: pagePost } ">
+  <a routerLink="/client/posts/show/{{post.id}}" class="list-group-item list-group-item-action list-group-item-secondary mt-1">
+    {{post.title | truncate}}
+  </a>
+</div>
+<br>
+<div align="center">
+  <pagination-controls maxSize="9"
+                       directionLinks="true"
+                       autoHide="true"
+                       responsive="true"
+                       previousLabel=""
+                       nextLabel=""
+                       screenReaderPaginationLabel="Pagination"
+                       screenReaderPageLabel="page"
+                       screenReaderCurrentLabel="You're on page" (pageChange)="pagePost = $event">
+
+  </pagination-controls>
+</div>
